@@ -102,7 +102,8 @@ const FullCalendarComponent = ({ carId }: fullCalendarProps) => {
   } else {
     console.error('Syncfusion license key not found')
   }
-
+  // I think this link can help you to set french language
+  //https://ej2.syncfusion.com/react/documentation/schedule/localization?_gl=1*cx4tdz*_ga*NDkxMzQxNDYzLjE3MTcyMzc2NzU.*_ga_41J4HFMX1J*MTcxNzI5NTQzNC40LjEuMTcxNzI5Njg4Ni4wLjAuMA..#globalization
   const eventSettings = {
     dataSource: {
       StartTime: new Date(24, 5, 10),

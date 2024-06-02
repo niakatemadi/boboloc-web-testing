@@ -1,26 +1,26 @@
-import { CarouselDemo } from '@/components/carouselDemo'
-import { getUserCar } from '@/db/firebase/utils'
-
-import FullCalendarComponent from '@/components/fullCalendarComponent'
-import { BsCalendarWeekFill } from 'react-icons/bs'
-import { FaCar } from 'react-icons/fa'
-import { GiCarDoor, GiPowerLightning } from 'react-icons/gi'
-import { MdAirlineSeatReclineExtra } from 'react-icons/md'
-import { PiEngineFill } from 'react-icons/pi'
-import { RiLuggageDepositFill } from 'react-icons/ri'
+import { CarouselDemo } from "@/components/carouselDemo";
+import { getUserCar } from "@/db/firebase/utils";
+import { BsCalendarWeekFill } from "react-icons/bs";
+import { FaCar } from "react-icons/fa";
+import { GiCarDoor, GiPowerLightning } from "react-icons/gi";
+import { MdAirlineSeatReclineExtra } from "react-icons/md";
+import { PiEngineFill } from "react-icons/pi";
+import { RiLuggageDepositFill } from "react-icons/ri";
+import dynamic from "next/dynamic";
+import FullCalendarComponent from "@/components/fullCalendarComponent";
 type carDetailsProps = {
   params: {
-    carId: string
-  }
-}
+    carId: string;
+  };
+};
 
 export default async function page({ params: { carId } }: carDetailsProps) {
-  const carDetails = await getUserCar()
+  const carDetails = await getUserCar();
 
   return (
     <main>
-      <div className="h-[50vh] md:h-[65vh]">
-        <div className="h-5/6 relative flex justify-center items-center">
+      <div className=" md:h-[65vh]">
+        <div className="h-5/6 relative flex justify-center items-center my-5">
           <CarouselDemo carDetails={carDetails} />
         </div>
         <div className="h-1/6 p-4 md:w-[50%] ">
@@ -59,12 +59,12 @@ export default async function page({ params: { carId } }: carDetailsProps) {
               <div
                 className="w-1/6 h-full bg-white flex justify-center items-center"
                 style={{
-                  backgroundColor: ' #7265e3',
+                  backgroundColor: " #7265e3",
                 }}
               >
                 <RiLuggageDepositFill
                   style={{
-                    color: '#fff',
+                    color: "#fff",
                   }}
                 />
               </div>
@@ -78,12 +78,12 @@ export default async function page({ params: { carId } }: carDetailsProps) {
               <div
                 className="w-1/6 h-full bg-white flex justify-center items-center"
                 style={{
-                  backgroundColor: ' #7265e3',
+                  backgroundColor: " #7265e3",
                 }}
               >
                 <GiPowerLightning
                   style={{
-                    color: '#fff',
+                    color: "#fff",
                   }}
                 />
               </div>
@@ -97,12 +97,12 @@ export default async function page({ params: { carId } }: carDetailsProps) {
               <div
                 className="w-1/6 h-full bg-white flex justify-center items-center"
                 style={{
-                  backgroundColor: ' #7265e3',
+                  backgroundColor: " #7265e3",
                 }}
               >
                 <FaCar
                   style={{
-                    color: '#fff',
+                    color: "#fff",
                   }}
                 />
               </div>
@@ -118,12 +118,12 @@ export default async function page({ params: { carId } }: carDetailsProps) {
               <div
                 className="w-1/6 h-full bg-white flex justify-center items-center"
                 style={{
-                  backgroundColor: ' #7265e3',
+                  backgroundColor: " #7265e3",
                 }}
               >
                 <PiEngineFill
                   style={{
-                    color: '#fff',
+                    color: "#fff",
                   }}
                 />
               </div>
@@ -136,12 +136,12 @@ export default async function page({ params: { carId } }: carDetailsProps) {
               <div
                 className="w-1/6 h-full bg-white flex justify-center items-center"
                 style={{
-                  backgroundColor: ' #7265e3',
+                  backgroundColor: " #7265e3",
                 }}
               >
                 <BsCalendarWeekFill
                   style={{
-                    color: '#fff',
+                    color: "#fff",
                   }}
                 />
               </div>
@@ -155,12 +155,12 @@ export default async function page({ params: { carId } }: carDetailsProps) {
               <div
                 className="w-1/6 h-full bg-white flex justify-center items-center"
                 style={{
-                  backgroundColor: ' #7265e3',
+                  backgroundColor: " #7265e3",
                 }}
               >
                 <GiCarDoor
                   style={{
-                    color: '#fff',
+                    color: "#fff",
                   }}
                 />
               </div>
@@ -175,12 +175,12 @@ export default async function page({ params: { carId } }: carDetailsProps) {
               <div
                 className="w-1/6 h-full bg-white flex justify-center items-center"
                 style={{
-                  backgroundColor: ' #7265e3',
+                  backgroundColor: " #7265e3",
                 }}
               >
                 <MdAirlineSeatReclineExtra
                   style={{
-                    color: '#fff',
+                    color: "#fff",
                   }}
                 />
               </div>
@@ -197,5 +197,5 @@ export default async function page({ params: { carId } }: carDetailsProps) {
         </div>
       </div>
     </main>
-  )
+  );
 }

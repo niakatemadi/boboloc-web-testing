@@ -1,4 +1,5 @@
 import { CarouselDemo } from '@/components/carouselDemo'
+import { NewCarousel } from '@/components/newCaousel'
 import { getUserCar } from '@/db/firebase/utils'
 
 import FullCalendarComponent from '@/components/fullCalendarComponent'
@@ -21,7 +22,8 @@ export default async function page({ params: { carId } }: carDetailsProps) {
     <main>
       <div className="h-[50vh] md:h-[65vh]">
         <div className="h-5/6 relative flex justify-center items-center">
-          <CarouselDemo carDetails={carDetails} />
+          {/* <CarouselDemo carDetails={carDetails} /> */}
+          <NewCarousel carDetails={carDetails} />
         </div>
         <div className="h-1/6 p-4 md:w-[50%] ">
           <p className="font-bold">Audi R8</p>

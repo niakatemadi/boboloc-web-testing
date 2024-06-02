@@ -14,7 +14,7 @@ type carouselDemoProps = {
 }
 
 export function CarouselDemo({ carDetails }: carouselDemoProps) {
-  const carPictures = []
+  // const carPictures = []
 
   // I want you push each picture in carPictures variable and display them in carousel with map
   // pictures are  carDetails.picture_one, carDetails.picture_two, carDetails.picture_three, carDetails.picture_four, carDetails.picture_five,
@@ -35,7 +35,7 @@ export function CarouselDemo({ carDetails }: carouselDemoProps) {
                 <CardContent className="flex aspect-square items-center justify-center p-6">
                   <Image
                     className="rounded-lg"
-                    src={carDetails.picture_one}
+                    src={carDetails.picture_three}
                     alt="hello"
                     fill={true}
                     objectFit="cover"
